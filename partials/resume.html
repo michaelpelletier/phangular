@@ -1,0 +1,117 @@
+<div id="content" ng:controller="resumeCtrl">
+
+
+
+
+
+	<div class="summary-container">
+		<div class="summary">
+			<h3>Summary</h3>
+			<ul>
+				<li>Knowledge of several areas of web development.</li>
+				<li>Solid organisational, communication, and management skills.</li>
+				<li>Adaptive to new techologies.</li>
+			</ul>
+		</div>
+		<div class="contact">
+			<h3>Contact</h3>
+			<ul>
+				<li><a href="mailto:admin@mpelletier.net" target="_blank">Email Me</a></li>
+				<li><a href="http://github.com/michaelpelletier" target="_blank">Github</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Skills -->
+	<div class="hr">
+		<div class="separator"></div>
+		<div class="border"></div>
+	</div>
+
+	<div class="skills">
+
+
+
+	<div class="skill-category">
+		<h3>Design</h3>
+		<div ng-repeat="skill in skills" ng-if="skill.category === 'Design'">
+			<div class="skill-name" ng-bind="skill.skill"></div>
+			<div class="skill-ranks">
+		    <li ng-repeat="n in limit(5)" class="skill-rank" ng-class="check_ranking(skill.rank, n)"></li>
+			</div>
+		</div>
+	</div>
+
+	<div class="skill-category">
+		<h3>Communication</h3>
+		<div ng-repeat="skill in skills" ng-if="skill.category === 'Communication'">
+			<div class="skill-name" ng-bind="skill.skill"></div>
+			<div class="skill-ranks">
+		    <li ng-repeat="n in limit(5)" class="skill-rank" ng-class="check_ranking(skill.rank, n)"></li>
+			</div>
+		</div>
+	</div>
+
+	<div class="skill-category">
+		<h3>Methods</h3>
+		<div ng-repeat="skill in skills" ng-if="skill.category === 'Methods'">
+			<div class="skill-name" ng-bind="skill.skill"></div>
+			<div class="skill-ranks">
+		    <li ng-repeat="n in limit(5)" class="skill-rank" ng-class="check_ranking(skill.rank, n)"></li>
+			</div>
+		</div>
+	</div>
+
+	<div class="skill-category">
+		<h3>Language</h3>
+		<div ng-repeat="skill in skills" ng-if="skill.category === 'Language'">
+			<div class="skill-name" ng-bind="skill.skill"></div>
+			<div class="skill-ranks">
+		    <li ng-repeat="n in limit(5)" class="skill-rank" ng-class="check_ranking(skill.rank, n)"></li>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="hr">
+		<div class="separator"></div>
+		<div class="border"></div>
+	</div>
+
+	<!-- Resume Timeline -->
+	<div class="timeline-container">
+		<div class="resume-timeline" ng-repeat="job in jobs">
+			<div class="company-info">
+				<div class="company" ng-bind="job.company"></div>
+				<div class="years" ng-bind="job.years"></div>
+			</div>
+
+			<div class="timeline">	
+				<div class="circle-clear">	
+					<div class="outercircle"></div>
+				  <div class="circle"></div>
+				  <div class="innercircle"></div>
+				</div>
+			</div>
+
+			<div class="job-description">
+				<div class="position" ng-bind="job.position"></div>
+				<div class="description" ng-bind="job.description"></div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+<link href="css/resume.css" rel="stylesheet" type="text/css" media="screen" />

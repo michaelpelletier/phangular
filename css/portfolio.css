@@ -1,0 +1,80 @@
+
+
+/* =====================================
+                PROJECTS 
+   ===================================== */
+
+.portfolio-container {
+  position: relative;
+}
+
+.project {
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.project img {
+  height: 83px;
+  width: 250px;
+}
+
+.focused_project {
+  background: #FDF8E1;
+  margin-top: -27px;
+  position: absolute;
+  width: 800px;
+}
+
+.image-thumbnail {
+  border: 2px solid #DBB6A4;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.project-brief {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+  width: 500px;
+}
+
+.project-synopsis {
+  height: 50px;
+}
+
+.project-name {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.project-role {
+  color: #DBB6A4;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.project-image {
+  border: 2px solid #DBB6A4;
+  display: block;
+  margin: 10px auto;
+}
+
+.project-role {
+  color: #DBB6A4;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Montserrat";
+}
+
+.return-link {
+  color: #91ADB0;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 12px;
+  margin: 20px 0px;
+}

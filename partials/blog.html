@@ -1,0 +1,9 @@
+<div id="content" ng:controller="blogCtrl">
+  <div class="post" ng:repeat="post in posts">
+    <h2 class="title"> <a href='#/blog/{{ post.id }}'>{{ post.title }}</a></h2>
+    {{ post.created_at }}
+    <div class="entry" ng-bind-html="post.preview"></div>
+
+    <a href='#/blog/{{ post.id }}'>view more</a>
+  </div>
+</div>

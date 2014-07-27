@@ -1,0 +1,283 @@
+
+/* =====================================
+                  RESUME 
+   ===================================== */
+
+
+ul {
+  list-style-position: inside;
+  padding-left: 10px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.section-container {
+  margin: 10px 0px 30px 25px;
+}
+
+.job-title {
+  color: #91ADB0;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.job-header {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.job-header:first-child {
+margin-top: 0px;
+}
+
+.job-company {
+  color: #DBB6A4;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Montserrat";
+}
+
+ul.projects {
+  margin-top: 5px;
+}
+
+ul.projects li {
+  margin-bottom: 10px; 
+}
+
+ul.skills {
+  padding-left: 25px;
+}
+
+ul.skills li {
+  list-style: none;
+}
+
+.skill {
+  color: #91ADB0;
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 20px;
+  text-transform: uppercase;
+  width: 125px;
+}
+
+.hidden_helper {
+  display: none;
+}
+
+
+
+/* =====================================
+              RESUME TIMELINE   
+   ===================================== */
+
+/* Positioning for Containers */
+.resume-timeline {
+  display: table-row;
+  position: relative;
+}
+
+.company-info {
+  display: inline-block;
+  padding-top: 5px;
+  text-align: right;
+  vertical-align: top;
+  width: 160px;
+}
+
+.job-description {
+  display: inline-block;
+  margin-bottom: 30px;
+  min-height: 170px;
+  padding-top: 5px;
+  text-align: left;
+  vertical-align: top;
+  width: 500px;
+}
+
+/* Circles */
+.timeline {
+  background: #8EA8C5;
+  display: inline-block;
+  height: 100%;
+  margin: 0px 25px;
+  opacity: 0.5;
+  position: relative;
+  vertical-align: top;
+  width: 4px;
+}
+
+.circle-clear {
+  background: #F2F2F2;
+  height: 27px;
+  left: -12px;
+  position: absolute;
+  width: 27px;
+}
+
+.outercircle {
+  background: #8EA8C5;
+  border-radius: 50px;
+  height: 28px;
+  width: 28px;
+}
+
+.circle {
+  background: #F2F2F0;
+  border-radius: 50px;
+  height: 20px;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  width: 20px;
+}
+
+.line {
+  background: #8EA8C5;
+  height: 170px;
+  margin: 0 auto;
+  opacity: 0.5;
+  text-align: center;
+  width: 4px;
+}
+
+.innercircle {
+  background: #385D86;
+  border-radius:50px;
+  height: 12px;
+  left: 8px;
+  position: absolute;
+  top: 8px;
+  width: 12px;
+}
+
+/* Text */
+.company {
+  color: #385D86;
+  font-family: "Montserrat";
+  margin: 0px;
+  font-size: 14px;
+}
+
+.years {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.position {
+  color: #666;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+.job-description .description {
+  color: #666;
+  font-family: Arial, Tahoma;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0px;
+}
+
+/* Final Bit */
+.timeline-container .resume-timeline:last-child .timeline {
+  background: transparent;
+}
+
+/* =====================================
+                  SKILLS   
+   ===================================== */
+
+.skill-category {
+  display: inline-block;
+  margin: 0px 35px;
+  vertical-align: top;
+  width: 125px;
+}
+
+.skill-name {
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.skill-rank {
+  border-radius:50px;
+  display: inline-block;
+  opacity: 0.5;
+  height: 12px;
+  margin: 0px 3px;
+  width: 12px;
+}
+
+.skill-rank.inactive {
+  /* background: #d0ccd9; // PURPLE */
+  background: #8EA8C5;
+}
+
+.skill-rank.active {
+  /* background: #55496d; // PURPLE */
+  background: #385D86;
+}
+
+
+/* =====================================
+                 HR DIVIDER 
+   ===================================== */
+
+.hr {
+  height: 25px;
+  line-height: 25px;
+  position: relative;
+  margin: 0;
+  padding: 30px 0;
+}
+
+.hr .separator {
+  background: #C9C64C;
+  height: 3px;
+  width: 70px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  z-index: 5;
+}
+
+.hr .border {
+  border-top: 1px solid #CCC;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+/* =====================================
+              SUMMARY / CONTACT   
+   ===================================== */
+
+.summary-container {
+  text-align: center;
+}
+
+.summary-container .summary {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  width: 450px;
+}
+
+.summary-container .contact {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  width: 150px;
+}
+
+.summary-container ul {
+  margin: 10px 0px;
+}
