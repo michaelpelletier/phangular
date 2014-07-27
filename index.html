@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="portfolio_app">
+  <head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+
+    <title>Portfolio of Michael Pelletier</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css" media="screen" />
+  </head>
+  <body ng-controller="MainController">
+    <div id="page-wrapper">
+      <div id="header">
+        <h1><a href="#/home">Michael Pelletier</a></h1>
+        <div class="description">UX Designer / Front-End Developer</div>
+        <ul id="navigation">
+          <li ng-class="getRoute('portfolio')"><a href="#/portfolio">Portfolio</a></li>
+          <li ng-class="getRoute('blog')"><a href="#/blog">UX Blog</a></li>
+          <li ng-class="getRoute('resume')"><a href="#/resume">Resume</a></li>
+        </ul>
+      </div>
+      <div id="page-content">
+        <div ng-view></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="lib/angular-route.min.js"></script>
+    <script type="text/javascript" src="lib/angular-resource.min.js"></script>
+    <script type="text/javascript" src="lib/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="lib/angular-animate.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/slideshow.js"></script>
+  </body>
+</html>
