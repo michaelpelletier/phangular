@@ -78,3 +78,51 @@
   font-size: 12px;
   margin: 20px 0px;
 }
+
+
+.portfolio {
+  text-align: center;
+}
+
+
+.portfolio-item {
+  border-radius: 150px;
+  display: inline-block;
+  height: 200px;
+  margin: 0px 15px;
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+}
+
+.portfolio-outer {
+  background: #8EA8C5;
+  height: 200px;
+  opacity: 0.5;
+  position: relative;
+  width: 200px;
+}
+
+.portfolio-inner {
+  background: #385D86;
+  border-radius: 150px;
+  height: 180px;
+  left: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  width: 180px;
+}
+
+.portfolio-image {
+  height: 180px;
+  position: absolute;
+  width: 180px;
+}
+
+.portfolio-image img.tree {
+  height: 180px;
+  position: absolute;
+  right: -15px;
+  top: 0px;
+}
