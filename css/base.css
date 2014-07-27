@@ -20,7 +20,8 @@ body {
 a {
   color: #385D86;
   cursor: pointer;
-  font-weight: bold;
+  font-family: "Montserrat";
+  font-weight: normal;
   position: relative;
   text-decoration: none;
 }
@@ -46,12 +47,6 @@ blockquote {
   text-align: center;
 }
 
-.description {
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
 /* Navigation */
 #navigation {
   margin: 0px;
@@ -64,17 +59,14 @@ blockquote {
 }
 
 #navigation li a {
-  color: #91ADB0;
-  cursor: pointer;
+  color: #8EA8C5;
   display: inline-block;
-  font-family: "Montserrat";
-  font-size: 14px;
   font-weight: bold;
   margin: 0px 20px;
 }
 
 #navigation li.active a {
-  color: #5F889C;
+  color: #385D86;
 }
 
 .hidden_helper {
@@ -148,15 +140,20 @@ h3 {
 }
 
 .header {
+  color: #8EA8C5;
   font-size: 28px;
   letter-spacing: 2px;
   line-height: 34px;
   margin: 0px;
   padding: 0px;
-  text-shadow: 1px 1px 0px #3c6794;
+  text-shadow: 1px 1px 0px #385D86;
   text-transform: uppercase;
 }
 
+.description {
+  font-weight: normal;
+  letter-spacing: 2px;
+}
 
 /* =====================================
               FIXED HEADER 
@@ -201,7 +198,6 @@ h3 {
   position: absolute;
   top: 5px;
 }
-
 
 .fixed-nav {
   display: inline-block;
