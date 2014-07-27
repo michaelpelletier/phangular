@@ -12,45 +12,13 @@ html {
 
 body {
   background: #F2F2F2;
-  color: #666;
-  font-family: "Lora", Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   margin: 0;
 }
 
-h1, h2, h1 a {
-  color: #4d80b8;
-  font-family: "Montserrat";
-  letter-spacing: 2px;
-  margin: 0px;
-  text-shadow: 1px 1px 0px #3c6794;
-  text-transform: uppercase;
-}
-
-h1, h1 a {
-  font-size: 28px;
-  line-height: 34px;
-  padding: 0px;
-}
-
-h2 {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 16px;
-  padding: 10px 0px 0px 0px;
-}
-
-h3 {
-  color: #666;
-  font-family: "Montserrat";
-  font-size: 14px;
-  font-weight: bold;
-  margin: 0px;
-}
-
 a {
-  color: #665884;
+  color: #385D86;
   cursor: pointer;
   font-weight: bold;
   position: relative;
@@ -109,126 +77,201 @@ blockquote {
   color: #5F889C;
 }
 
-/* Other Links */
-.view-project,
-.view-more,
-.view-less
-{
-  color: #91ADB0;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Montserrat";
-  font-size: 12px;
-}
-
-.view-less {
-  margin: 20px 0px;
+.hidden_helper {
+  display: none;
 }
 
 
 /* =====================================
-                  BLOG 
+              FONT STYLES 
    ===================================== */
 
-.blog-post {
-  margin-bottom: 20px;
+
+h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
 }
 
-.blog-title {
+h2 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 10px 0px 0px 0px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.mont-header-dark {
+  color: #666666;
+  font-family: "Montserrat";
+  font-size: 14px;
   font-weight: bold;
 }
 
-.blog-date {
-  color: #644B6B;
+.mont-header-blue {
+  color: #385D86;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.content {
+  color: #666666;
+  font-family: arial, tahoma;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.lora-snippet {
+  color: #666666;
+  font-family: "Lora";
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.ital-text {
+  color: #999999;
+  font-family: arial, tahoma;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.small {
   font-size: 12px;
 }
 
-.blog-content {
-  margin-top: 20px;
+.header {
+  font-size: 28px;
+  letter-spacing: 2px;
+  line-height: 34px;
+  margin: 0px;
+  padding: 0px;
+  text-shadow: 1px 1px 0px #3c6794;
+  text-transform: uppercase;
 }
-
 
 
 /* =====================================
-              IMAGE SLIDER   
+              FIXED HEADER 
    ===================================== */
 
-.nav {
-  margin-bottom: 5px;
+.fixed-header {
+  background: #F2F2F2;
+  border-bottom: 1px solid #CCC;
+  left: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1)
 }
 
-.slider {
-  margin: 20px auto;
-  display: block;
-  position: relative;
-  width: 680px;
-  height: 450px;
+.header-inner {
+  height: 30px;
+  margin: 0 auto;
+  padding: 0px 10px;
+  width: 800px;
 }
 
-.slider.pretty_okc1   { height: 620px; width: 800px; }
-.slider.pretty_okc2   { height: 585px; width: 670px; }
-.slider.slide_kate    { height: 685px; width: 500px; }
-.slider.slide_keenan  { height: 450px; width: 680px; }
-
-.focused_project .slider {
-  margin-top: 0px;
-}
-
-.slider-nav {
-  color: #000;
-  font-family: "Ubuntu";
-  font-weight: normal;
-  font-size: 11px;
-  letter-spacing: 1px;
-  margin: 0px 10px;
-}
-
-.slider-nav.prev {
-  margin-left: 0px;
-}
-
-.slider .dot {
-  background: #DBB6A4;
-  border-radius: 4px;
+.logo {
   display: inline-block;
-  height: 8px;
-  margin: 5px 3px 0px 3px;
+  float: left;
+  height: 25px;
+  padding: 5px 8px 0px 8px;
   vertical-align: top;
-  width: 8px;
 }
 
-.slider .dot.current {
-  background: #91ADB0;  
+.current-page {
+  border-left: 1px solid #95A7BC;
+  border-right: 1px solid #95A7BC;
+  display: inline-block;
+  position: relative;
+  width: 500px;
 }
 
-.slide {
+.page-title {
+  left: 5px;
   position: absolute;
-  top:20px;
-  left:0;
-  box-shadow: 0px 0px 15px #999;
+  top: 5px;
 }
 
-.slide-description {
-  background: #FFF;
+
+.fixed-nav {
+  display: inline-block;
+  float: right;
+  height: 25px;
+  padding: 5px 5px 0px 5px;
+  vertical-align: top;
+  width: 190px;
+}
+
+.fixed-nav a {
   font-family: "Montserrat";
   font-size: 12px;
-  padding: 5px;
+  font-weight: normal;
+  margin: 0px 5px; 
 }
 
-/* Animations */
-.slide.ng-hide-add, .slide.ng-hide-remove {
-  -webkit-transition:all linear 0.5s;
-  -moz-transition:all linear 0.5s;
-  -o-transition:all linear 0.5s;
-  transition:all linear 0.5s;
-  display:block!important;
-}
- 
-.slide.ng-hide-add.ng-hide-add-active,.slide.ng-hide-remove {
-  opacity:0;
-}
- 
-.slide.ng-hide-add,.slide.ng-hide-remove.ng-hide-remove-active {
-  opacity:1;
+.bar {
+  background-color: #C0CDDB;
+  height: 30px;
+  opacity: 0.3;
+  width: 0px;
 }
 
+
+/* =====================================
+            LOADING SPINNER 
+   ===================================== */
+
+
+.loading-spinner {
+  margin: 100px auto 0;
+  opacity: 0.5;
+  text-align: center;
+  width: 70px;
+}
+
+.loading-spinner > div {
+  background-color: #385D86;
+  border-radius: 100%;
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.loading-spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loading-spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

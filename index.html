@@ -10,13 +10,29 @@
 
     <title>Portfolio of Michael Pelletier</title>
     <link href="css/base.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="css/portfolio.css" rel="stylesheet" type="text/css" media="screen" />
-
   </head>
   <body ng-controller="MainController">
+
+    <div class="fixed-header" ng-show="scrollPercent > 6" ng-cloak>
+      <div class="header-inner">
+        <div class="logo">
+          <a href="#/home" class="mont-header-blue">MPelletier</a>
+        </div>
+        <div class="current-page">
+          <div class="bar"></div>
+          <div class="page-title mont-header-dark" ng-bind="title"></div>
+        </div>
+        <div class="fixed-nav">
+          <a href="#/portfolio">Portfolio</a>
+          <a href="#/blog">UX Blog</a>
+          <a href="#/resume">Resume</a>
+        </div>
+      </div>
+    </div>
+
     <div id="page-wrapper">
       <div id="header">
-        <h1><a href="#/home">Michael Pelletier</a></h1>
+        <h1><a href="#/home" class="mont-header-blue header">Michael Pelletier</a></h1>
         <div class="description">UX Designer / Front-End Developer</div>
         <ul id="navigation">
           <li ng-class="getRoute('portfolio')"><a href="#/portfolio">Portfolio</a></li>
@@ -25,7 +41,7 @@
         </ul>
       </div>
       <div id="page-content">
-        <div ng-view></div>
+        <div ng-view autoscroll="true"></div>
       </div>
     </div>
     <script type="text/javascript" src="lib/angular-route.min.js"></script>

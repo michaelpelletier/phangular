@@ -1,80 +1,25 @@
+<link href="css/portfolio.css" rel="stylesheet" type="text/css" media="screen" />
+
 <div id="content" class="portfolio" ng:controller="portfolioCtrl">
-	
 
-
+	<div class="loading-spinner" ng-show="loading">
+	  <div class="bounce1"></div>
+	  <div class="bounce2"></div>
+	  <div class="bounce3"></div>
+	</div>
 	<div class="portfolio-item" ng-repeat="project in projects">
-		<div class="portfolio-outer"></div>
-		<div class="portfolio-inner">
-			<div class="portfolio-snippet">
-				{{project.name}}
-				{{project.role}}
+		<div class="portfolio-circle">
+			<div class="portfolio-outer"></div>
+			<div class="portfolio-inner">
+				<div class="portfolio-image">
+					<img ng-src='{{project.image}}' ng-class="project.abrv">
+				</div>
 			</div>
-			<div class="portfolio-image">
-				<img ng-src='{{project.image}}' ng-class="project.abrv">
-			</div>
+		</div>
+		<div class="portfolio-snippet">
+			<div class="mont-header-blue" ng-bind="project.name"></div>
+			<div class="mont-header-dark" ng-bind="project.role"></div>
+			<div class="lora-snippet" ng-bind="project.synopsis"></div>
 		</div>
 	</div>
-
-
-
-
-
-	<div class="row">
-
-		<div class="portfolio-item">
-			<div class="portfolio-outer"></div>
-			<div class="portfolio-inner">
-				<div class="portfolio-image">
-					<img src="images/thumb-kate.png">
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="portfolio-item">
-			<div class="portfolio-outer"></div>
-			<div class="portfolio-inner">
-				<div class="portfolio-image">
-					<img src="images/thumb-kate.png">
-				</div>
-			</div>
-		</div>
-		<div class="portfolio-item">
-			<div class="portfolio-outer"></div>
-			<div class="portfolio-inner">
-				<div class="portfolio-image">
-					<img src="images/thumb-kate.png">
-				</div>
-			</div>
-		</div>
-		<div class="portfolio-item">
-			<div class="portfolio-outer"></div>
-			<div class="portfolio-inner">
-				<div class="portfolio-image">
-					<img src="images/thumb-kate.png">
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="portfolio-item">
-			<div class="portfolio-outer"></div>
-			<div class="portfolio-inner">
-				<div class="portfolio-image">
-					<img src="images/thumb-kate.png">
-				</div>
-			</div>
-		</div>
-		<div class="portfolio-item">
-			<div class="portfolio-outer"></div>
-			<div class="portfolio-inner">
-				<div class="portfolio-image">
-					<img src="images/thumb-kate.png">
-				</div>
-			</div>
-		</div>
-	</div>
-
 </div>

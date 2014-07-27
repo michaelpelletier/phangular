@@ -1,9 +1,26 @@
-<div id="content" ng:controller="blogCtrl">
-  <div class="post" ng:repeat="post in posts">
-    <h2 class="title"> <a href='#/blog/{{ post.id }}'>{{ post.title }}</a></h2>
-    {{ post.created_at }}
-    <div class="entry" ng-bind-html="post.preview"></div>
+<link href="css/blog.css" rel="stylesheet" type="text/css" media="screen" />
 
-    <a href='#/blog/{{ post.id }}'>view more</a>
+<div id="content" ng-controller="blogCtrl">
+	<div class="loading-spinner" ng-show="loading">
+	  <div class="bounce1"></div>
+	  <div class="bounce2"></div>
+	  <div class="bounce3"></div>
+	</div>
+  <div class="post" ng-repeat="post in posts">
+    <div class='date-object'>
+	    <div class="date-ring"></div>
+	    <div class="date-clear"></div>
+    	<div class='date-object-inner'>
+	    	<div class="date">{{post.created_at | date : 'dd'}}</div>
+				<div class="mont">{{post.created_at | date : 'MMMM'}}</div>    	
+				<div class="year">{{post.created_at | date : 'yyyy'}}</div>
+			</div>
+		</div>
+
+		<div class="post-container">
+			<a href='#/blog/{{ post.id }}' class="mont-header-blue" ng-bind="post.title"></a>
+	    <div class="content" ng-bind-html="post.preview"></div>
+	    <a href='#/blog/{{ post.id }}' class="mont-header-blue small">view more</a>
+	  </div>
   </div>
 </div>

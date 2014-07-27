@@ -1,18 +1,32 @@
 
-function MainController($scope,$location) {
+function MainController($scope, $rootScope, $location) {
   $scope.getRoute = function(path) {
     var route = $location.path().replace('/', '');
     if (route === path) {
       return 'active';
     }
   }
+
+  $(window).scroll(function() {
+    $scope.scrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
+    $('.bar').css('width', $scope.scrollPercent + "%" );
+    $scope.$apply();
+  });
+
+
+  $rootScope.$on('setTitle', function(event, page) {
+    $scope.title = page;
+  });
 }
 
-function homeCtrl($scope) {
-
+function homeCtrl($scope, $rootScope) {
+  // Set Title
+  $rootScope.$emit('setTitle', 'Home');
 }
 
-function portfolioCtrl($scope) {
+function portfolioCtrl($scope, $rootScope) {
+  // Set Title
+  $rootScope.$emit('setTitle', 'Portfolio');
 
   $scope.projects = [
     {
@@ -59,18 +73,23 @@ function portfolioCtrl($scope) {
     }
   ];
 
-
 }
 
-function resumeCtrl($scope, Blog) {
+function resumeCtrl($scope, $rootScope, Blog) {
   // Get Data
-  Blog.get({action:'jobs'},function(response){
-    $scope.jobs = response.data;
-  });
+  $scope.loading = true;
 
   Blog.get({action:'skills'},function(response){
     $scope.skills = response.data;
   });
+
+  Blog.get({action:'jobs'},function(response){
+    $scope.jobs = response.data;
+    $scope.loading = false;
+  });
+
+  // Set Title
+  $rootScope.$emit('setTitle', 'Resume');
 
   $scope.limit = function(max){
     var input = [];
@@ -89,20 +108,28 @@ function resumeCtrl($scope, Blog) {
   }
 }
 
-function blogCtrl($scope, Blog) {
+function blogCtrl($scope, $rootScope, Blog) {
+  // Set Title
+  $rootScope.$emit('setTitle', 'UX Blog');
+  $scope.loading = true;
+
   Blog.get({action:'home'},function(response){
     $scope.posts = response.data;
+    $scope.loading = false;
   });
 }
 
-function blogDetailsCtrl($scope, $routeParams, Blog){
+function blogDetailsCtrl($scope, $rootScope, $routeParams, Blog){
   $scope.blogReady = false;
+  $scope.loading = true;
 
  	Blog.get({blogId:$routeParams.id, action:'blog_details'},function(response) {
     $scope.post = response.data;
     $scope.blogReady = true;
+    $scope.loading = false;
+    // Set Title
+    $rootScope.$emit('setTitle', $scope.post.title);
   });
-
 
   $scope.pretty_okc1 =[
     {
@@ -154,10 +181,4 @@ function blogDetailsCtrl($scope, $routeParams, Blog){
       id: 4
     },    
   ];
-
-
-
-
-
-
 }
