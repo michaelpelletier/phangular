@@ -57,31 +57,29 @@ Portfolio.Directives.directive('slider', function ($timeout) {
 		    },    
 		  ];
    
-    	if (scope.images !== '') {
-			  scope.name = scope.images;
-			  scope.images = scope[scope.images];
-				scope.currentIndex = 0;
+		  scope.name = scope.images;
+		  scope.images = scope[scope.images];
+			scope.currentIndex = 0;
 
-				scope.next = function() {
-					scope.currentIndex < scope.images.length - 1 ? scope.currentIndex++ : scope.currentIndex = 0;
-				};
-				
-				scope.prev = function() {
-					scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = scope.images.length - 1;
-				};
+			scope.next = function() {
+				scope.currentIndex < scope.images.length - 1 ? scope.currentIndex++ : scope.currentIndex = 0;
+			};
+			
+			scope.prev = function() {
+				scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = scope.images.length - 1;
+			};
 
-				scope.select = function(index) {
-					scope.currentIndex = index;
-				}
-				
-				scope.$watch('currentIndex',function(){
-					scope.images.forEach(function(image){
-						image.visible = false;
-					});
+			scope.select = function(index) {
+				scope.currentIndex = index;
+			}
+			
+			scope.$watch('currentIndex',function(){
+				scope.images.forEach(function(image){
+					image.visible = false;
+				});
 
-					scope.images[scope.currentIndex].visible = true;
-				}); 
-    	}
+				scope.images[scope.currentIndex].visible = true;
+			}); 
 	  },
 		template: '<div class="slider {{name}}"><div class="nav"><a ng-click="prev()" class="slider-nav prev">previous</a><span ng-repeat="image in images"><a class="dot" ng-click="select(image.id)" ng-class="{current: currentIndex === image.id}"></a></span><a ng-click="next()" class="slider-nav">next</a></div><div class="slide" ng-repeat="image in images" ng-show="image.visible"><img ng-src="{{image.src}}" /><div class="slide-description" ng-bind-html="image.title"></div></div></div>'
   }

@@ -6,11 +6,11 @@
   <div class="entry" ng-init="trigger_directives()">
 		<div class="blog-content" ng-bind-html="post.body_part_1"></div>
 		<div class="blog-content" ng-bind-html="post.body_part_2"></div>
-		<div slider images="post.image_id_1"></div>
+		<div slider images="post.image_id_1" ng-if="post.image_id_1 !== ''"></div>
 		<div class="blog-content" ng-bind-html="post.body_part_3"></div>
-		<div slider images="post.image_id_2"></div>
+		<div slider images="post.image_id_2" ng-if="post.image_id_2 !== ''"></div>
 		<div class="blog-content" ng-bind-html="post.body_part_4"></div>	
-		<div slider images="post.image_id_3"></div>
+		<div slider images="post.image_id_3" ng-if="post.image_id_3 !== ''"></div>
 		<div class="blog-content" ng-bind-html="post.body_part_5"></div>
   </div>
 </div>

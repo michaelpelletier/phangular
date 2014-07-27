@@ -8,7 +8,7 @@ Portfolio.config(function($routeProvider) {
     .when('/blog',      { templateUrl: 'partials/blog.html'})
     .when('/portfolio', { templateUrl: 'partials/portfolio.html'})
     .when('/resume',    { templateUrl: 'partials/resume.html'})
-    .otherwise({redirectTo:'/home', templateUrl:'partials/home.html'});    
+    .otherwise({redirectTo:'/home', templateUrl:'partials/home.html'});
 });
 
 Portfolio.factory('Blog', function ($resource) {
