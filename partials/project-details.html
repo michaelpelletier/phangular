@@ -1,0 +1,19 @@
+<link href="css/portfolio.css" rel="stylesheet" type="text/css" media="screen" />
+
+<div id="content" class="project" ng-controller="projectDetailsCtrl">
+	<div class="loading-spinner" ng-show="loading">
+	  <div class="bounce1"></div>
+	  <div class="bounce2"></div>
+	  <div class="bounce3"></div>
+	</div>
+	<div class="focused_project"  ng-if="projectReady">
+		<div class="mont-header-blue" ng-bind="project.title"></div>
+		<div class="mont-header-dark" ng-bind="project.role"></div>
+		
+		<img ng-if="project.image_slider === ''" ng-src="{{project.image}}" class="project-image" />
+		<div slider images="project.image_slider" ng-if="project.slider !== ''"></div>
+
+		<div ng-bind-html="project.description" class="content"></div>
+	  <a href='#/portfolio' class="mont-header-blue small">return to portfolio</a>
+	</div>
+</div>

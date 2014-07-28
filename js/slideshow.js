@@ -57,6 +57,43 @@ Portfolio.Directives.directive('slider', function ($timeout) {
 		    },    
 		  ];
    
+		  scope.slide_keenan = [
+		    {
+		      src: 'images/keenan1.png',
+		      title: 'Blog',
+		      id: 0
+		    },
+		    {
+		      src: 'images/keenan2.png',
+		      title: 'Portfolio',
+		      id: 1
+		    },
+		    {
+		      src: 'images/keenan3.png',
+		      title: 'Contact',
+		      id: 2
+		    }
+		  ];
+
+		  scope.slide_kate = [
+		    {
+		      src: 'images/kate1.png',
+		      title: 'Gallery',
+		      id: 0
+		    },
+		    {
+		      src: 'images/kate2.png',
+		      title: 'Resume',
+		      id: 1
+		    },
+		    {
+		      src: 'images/kate3.png',
+		      title: 'Contact',
+		      id: 2
+		    }
+		  ];
+		  
+
 		  scope.name = scope.images;
 		  scope.images = scope[scope.images];
 			scope.currentIndex = 0;

@@ -48,12 +48,22 @@
   width: 180px;
 }
 
-.portfolio-image img.tree {
+.portfolio-link {
+  display: block;
+  height: 180px;
+  position: relative;
+  width: 180px;
+}
+
+.portfolio-image img {
   height: 180px;
   position: absolute;
-  right: -15px;
-  top: 0px;
 }
+
+img.keenan  { left:    0px; }
+img.chummer { left:    0px; }
+img.tree    { right: -14px; }
+img.kate    { left: -128px; }
 
 .portfolio-snippet {
   display: inline-block;
@@ -61,4 +71,18 @@
   text-align: left;
   vertical-align: top;
   width: 400px;
+}
+
+/* =====================================
+              PROJECT DETAIL
+   ===================================== */
+
+.project {
+  margin: 0 auto;
+  width: 620px;
+}
+
+.small {
+  display: inline-block;
+  margin-top: 20px;
 }
