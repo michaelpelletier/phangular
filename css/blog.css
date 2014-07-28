@@ -9,6 +9,11 @@
   width: 620px;
 }
 
+.post {
+  margin: 0 auto;
+  width: 710px;
+}
+
 .blog-content {
   margin: 16px 0px;
 }
@@ -28,6 +33,7 @@
   background: #8EA8C5;
   border-radius: 50px;
   height: 76px;
+  opacity: 0.5;
   width: 76px;
 }
 
@@ -48,26 +54,46 @@
   font-family: arial, tahoma;
   height: 60px;
   left: 8px;
+  opacity: 0.5;
   position: absolute;
   text-align: center;
   top: 8px;
   width: 60px;
 }
 
-.date-object-inner .date {
+.date {
+  font-family: arial, tahoma;
   font-size: 20px;
   height: 18px;
+  left: 8px;
   line-height: 20px;
-  margin-top: 6px;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  width: 60px;
 }
 
-.date-object-inner .mont {
+.mont {
+  font-family: arial, tahoma;
   font-size: 10px;
   height: 13px;
+  left: 8px;
+  position: absolute;
+  text-align: center;
+  top: 32px;
+  width: 60px;
+
+
 }
 
-.date-object-inner .year {
+.year {
+  font-family: arial, tahoma;
   font-size: 12px;
+  left: 8px;
+  position: absolute;
+  text-align: center;
+  top: 45px;
+  width: 60px;
 }
 
 /* =====================================
