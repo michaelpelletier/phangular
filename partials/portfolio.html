@@ -1,5 +1,3 @@
-<link href="css/portfolio.css" rel="stylesheet" type="text/css" media="screen" />
-
 <div id="content" class="portfolio" ng-controller="portfolioCtrl">
 	<div class="loading-spinner" ng-show="loading">
 	  <div class="bounce1"></div>
@@ -7,21 +5,23 @@
 	  <div class="bounce3"></div>
 	</div>
 
-	<div class="portfolio-item" ng-repeat="project in projects">
-		<div class="portfolio-circle">
-			<div class="portfolio-outer"></div>
-			<div class="portfolio-inner">
-				<div class="portfolio-image">
-					<a href='#/project/{{ project.id }}' class="portfolio-link">
-						<img ng-src='{{project.image}}' ng-class="project.abrv" />
-					</a>
+	<div class="page_content" ng-hide="loading">
+		<div class="portfolio-item" ng-repeat="project in projects">
+			<div class="portfolio-circle">
+				<div class="portfolio-outer"></div>
+				<div class="portfolio-inner">
+					<div class="portfolio-image">
+						<a href='#/project/{{ project.id }}' class="portfolio-link">
+							<img ng-src='{{project.image}}' ng-class="project.abrv" />
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="portfolio-snippet">
-			<a href='#/project/{{ project.id }}' class="mont-header-blue" ng-bind="project.title"></a>
-			<div class="mont-header-dark" ng-bind="project.role"></div>
-			<div class="lora-snippet" ng-bind="project.synopsis"></div>
+			<div class="portfolio-snippet">
+				<a href='#/project/{{ project.id }}' class="mont-header-blue" ng-bind="project.title"></a>
+				<div class="mont-header-dark" ng-bind="project.role"></div>
+				<div class="lora-snippet" ng-bind="project.synopsis"></div>
+			</div>
 		</div>
 	</div>
 </div>

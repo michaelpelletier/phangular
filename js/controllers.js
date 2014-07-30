@@ -22,6 +22,14 @@ function MainController($scope, $rootScope, $location) {
 function homeCtrl($scope, $rootScope) {
   // Set Title
   $rootScope.$emit('setTitle', 'Home');
+
+  $("#doughnutChart").drawDoughnutChart([
+    { title: "UX Design",     value:  24 }, 
+    { title: "Javascript",    value:  20 }, 
+    { title: "Design",        value:  12 },
+    { title: "Communication", value:  18 }, 
+    { title: "HTML / CSS",    value:  26 }  
+  ]);
 }
 
 function portfolioCtrl($scope, $rootScope, Blog) {

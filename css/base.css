@@ -360,3 +360,78 @@ h3 {
   opacity:1;
 }
 
+
+/* General Homepage */
+
+.home {
+  margin: 0 auto;
+  width: 620px;
+}
+
+.content.thin {
+  width: 415px;
+}
+
+
+/* =====================================
+              PIE GRAPH DONUT   
+   ===================================== */
+
+.donut {
+  float: right;
+  height: 200px;
+  position: relative;
+  width: 200px;
+}
+
+.inner-circle {
+  background: #385D86;
+  border-radius: 100px;
+  height: 100px;
+  left: 50px;
+  opacity: 0.5;
+  position: absolute;
+  top: 50px;
+  width: 100px;
+}
+
+
+.chart {
+  width: 200px;
+  height: 200px;
+}
+
+.doughnutTip {
+  color: #666666;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  min-width: 30px;
+  max-width: 300px;
+  padding: 5px 15px;
+  border-radius: 1px;
+  background: rgba(255,255,255,.7);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: .06em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5); 
+  pointer-events: none;
+}
+
+.doughnutSummary,
+.doughnutSummaryTitle,
+.doughnutSummaryNumber {
+  display: none;
+}
+
+.chart path {
+  fill: #C0CDDB;
+  stroke-width: 5px;
+  stroke: #f2f2f2;
+}
+
+.chart path:hover {
+  fill: #95A7BC ;
+}

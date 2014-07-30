@@ -26,6 +26,10 @@
   width: 500px;
 }
 
+.content ul {
+  padding-left: 20px;
+}
+
 /* Circles */
 .timeline {
   background: #8EA8C5;
